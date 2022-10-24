@@ -15,13 +15,13 @@ public class HelloSeleniumTest2 {
     @BeforeAll
     static void setupAll() {
         WebDriverManager.chromedriver().setup();
-        WebDriverManager.edgedriver().setup();
+        //WebDriverManager.edgedriver().setup();
     }
 
     @BeforeEach
     void setup() {
         driver = new ChromeDriver();
-        driver = new EdgeDriver();
+        //driver = new EdgeDriver();
     }
 
     @AfterEach
