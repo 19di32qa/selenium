@@ -6,8 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-
+import org.openqa.selenium.edge.EdgeDriver;
 
 
 public class HelloSeleniumTest2 {
@@ -16,11 +15,13 @@ public class HelloSeleniumTest2 {
     @BeforeAll
     static void setupAll() {
         WebDriverManager.chromedriver().setup();
+        WebDriverManager.edgedriver().setup();
     }
 
     @BeforeEach
     void setup() {
         driver = new ChromeDriver();
+        driver = new EdgeDriver();
     }
 
     @AfterEach
