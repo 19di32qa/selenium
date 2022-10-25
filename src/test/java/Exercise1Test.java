@@ -1,11 +1,11 @@
-package locators;
+
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -44,7 +44,7 @@ public class Exercise1Test {
         Assert.assertFalse(option2.isSelected());
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testHover() {
         driver.get("https://the-internet.herokuapp.com/hovers");
         Actions action = new Actions(driver);
@@ -57,7 +57,7 @@ public class Exercise1Test {
         Assert.assertTrue(elem2.getText().equals("name: user1"));
         Assert.assertTrue(elem2.isDisplayed());
     }
-    @Test
+    @org.junit.jupiter.api.Test
     public void testContextMenuAndAlert() {
         driver.get("https://the-internet.herokuapp.com/context_menu");
         element = driver.findElement(By.cssSelector("#hot-spot"));
@@ -66,7 +66,7 @@ public class Exercise1Test {
 
         driver.switchTo().alert().accept();
     }
-    @Test
+    @org.junit.jupiter.api.Test
     public void testKeyEnter() {
         driver.get("https://the-internet.herokuapp.com/key_presses");
         element = driver.findElement(By.cssSelector("#target"));
