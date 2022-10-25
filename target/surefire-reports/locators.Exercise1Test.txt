@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: HelloSeleniumTest
+Test set: locators.Exercise1Test
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.847 s - in HelloSeleniumTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.361 s - in locators.Exercise1Test

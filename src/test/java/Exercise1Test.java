@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,21 +13,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class exercise1 {
-    WebDriver driver;
+public class Exercise1Test {
+    static WebDriver driver;
     WebElement element;
-    @Before
-    public void setUp() {
+    @BeforeAll
+
+    public static void setUp() {
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         driver = new ChromeDriver();
     }
 
-    @After
-    public void tearDown() throws Exception {
+    @AfterAll
+    public static void tearDown() throws Exception {
         driver.quit();
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testSelectedOption() {
 //        driver.get("https://the-internet.herokuapp.com/dropdown");
 //        driver.findElement(By.cssSelector("#dropdown")).click();
