@@ -3,6 +3,7 @@ package locators;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,8 +32,11 @@ public class Alerts {
         driver.switchTo().alert().accept();
 
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/ul/li[3]/button")).click();
-        driver.switchTo().alert().sendKeys("Text");
-        driver.switchTo().alert().accept();
+        //driver.switchTo().alert().sendKeys("Text");
+        Alert al = driver.switchTo().alert();
+        al.sendKeys("more text");
+        //driver.switchTo().alert().accept();
+        al.accept();
 
     }
 }
